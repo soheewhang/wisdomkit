@@ -10,12 +10,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110613035044) do
+ActiveRecord::Schema.define(:version => 20110613095548) do
 
   create_table "payments", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "program_id"
-    t.boolean  "payed"
+    t.integer  "rsvp_id"
     t.boolean  "discount"
     t.boolean  "exemption"
     t.string   "paymethod"
@@ -28,6 +26,14 @@ ActiveRecord::Schema.define(:version => 20110613035044) do
     t.integer  "price"
     t.integer  "period"
     t.integer  "term"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "rsvps", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "program_id"
+    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

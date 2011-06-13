@@ -2,7 +2,7 @@
 class Program < ActiveRecord::Base
   
   has_many :users
-  has_many :payments
+  has_many :rsvps
   
   validates :title, :price, :period, :term, :presence => true
   
