@@ -1,0 +1,10 @@
+<h1>Program List</h1>
+
+<% @programs.each do |program| %>
+	<div>
+	<%= program.id %>
+	<%= program.title %>
+	<%= program.price %>
+	<%= link_to "신청하기", program_path(program) %>
+	</div>
+<% end %>

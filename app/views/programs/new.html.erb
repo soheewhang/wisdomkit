@@ -1,0 +1,23 @@
+<h1>New Program</h1>
+
+<%= form_for(@program) do |f| %>
+  <div class="field">
+    <%= f.label :title, "강의제목" %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :price, "가격 (원)" %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :period, "기간" %><br />
+    <%= f.text_field :period %>
+  </div>
+  <div class="field">
+    <%= f.label :term, "기수" %><br />
+    <%= f.text_field :term %>
+  </div>
+  <div class="actions">
+    <%= f.submit "프로그램 등록하기" %>
+  </div>
+<% end %>

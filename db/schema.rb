@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(:version => 20110613035044) do
     t.string   "phone_number"
     t.datetime "birthday"
     t.string   "group"
+    t.boolean  "admin"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
