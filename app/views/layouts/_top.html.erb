@@ -1,0 +1,7 @@
+<div><%= link_to image_tag("/logo.png"), root_path %>
+	<% if signed_in? %>
+			<span><%= link_to "로그아웃", root_path %></span>
+	<% else %>	
+			<span><%= link_to "로그인", '/signin' %></span>
+	<% end %>			
+</div>

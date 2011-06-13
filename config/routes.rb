@@ -3,6 +3,11 @@ Wisdomkit::Application.routes.draw do
   resources :users
   resources :programs
   resources :payments
+  resources :sessions
+  
+  match '/signin', :to => 'sessions#new'
+  
+  root :to => 'programs#index'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
