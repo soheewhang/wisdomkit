@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  price: 1
+  period: 1
+  term: 1
+
+two:
+  title: MyString
+  price: 1
+  period: 1
+  term: 1

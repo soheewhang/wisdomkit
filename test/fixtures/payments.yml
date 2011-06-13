@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  program_id: 1
+  payed: false
+  discount: false
+  exemption: false
+  paymethod: MyString
+
+two:
+  user_id: 1
+  program_id: 1
+  payed: false
+  discount: false
+  exemption: false
+  paymethod: MyString
