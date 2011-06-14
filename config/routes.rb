@@ -2,10 +2,12 @@ Wisdomkit::Application.routes.draw do
   
   resources :users
   resources :programs
+  resources :rsvps
   resources :payments
   resources :sessions
   
   match '/signin', :to => 'sessions#new'
+  match '/signout', :to => 'sessions#destroy'
   
   root :to => 'programs#index'
   
