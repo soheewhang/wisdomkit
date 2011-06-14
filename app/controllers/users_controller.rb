@@ -25,6 +25,8 @@ before_filter :non_signed_in_user_only, :only => [:create]
   
   def show
     @user = User.find(params[:id])
+    @programs = @user.programs
+    @rsvps = @user.rsvps
   end
   
 end

@@ -18,6 +18,6 @@
 	<div>프로그램을 신청하시려면 로그인하세요!</div>
 <% else %>
 	<% if current_user.admin? %>
-		<div><%= link_to "새 프로그램 등록하기", 'programs/new' %></div>
+		<div><%= link_to "새 프로그램 등록하기", new_program_path %></div>
 	<% end %>
 <% end %>

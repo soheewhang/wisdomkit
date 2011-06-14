@@ -1,1 +1,10 @@
 <h1><%= @user.name %></h1>
+
+<% if current_user == @user %>
+	<div>내가 신청한 프로그램</div>
+	<div>
+		<%= render @rsvps %>
+	</div>
+<% else %>
+<% end %>
+

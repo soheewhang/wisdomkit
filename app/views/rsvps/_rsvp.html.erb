@@ -1,0 +1,9 @@
+<%= rsvp.user_id %>
+<%= rsvp.program_id %>
+<%= rsvp.status %>
+<% if rsvp.status == "not payed" %> 
+	<%= link_to "결제하기", new_rsvp_path %>
+<% else %>
+	결제가 완료되었습니다
+<% end %>
+ 
