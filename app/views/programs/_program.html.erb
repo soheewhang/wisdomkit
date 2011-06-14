@@ -1,0 +1,11 @@
+<div>
+	<%= program.id %>
+	<%= program.title %>
+	<%= program.price %>
+	<%= program.period %>주
+	<%= program.term %>기 
+	<% if signed_in? %>
+	<%= link_to "신청하기", program_path(program) %>
+	<% else%>
+	<% end %>
+</div>

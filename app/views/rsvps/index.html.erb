@@ -1,0 +1,7 @@
+<% if signed_in? %>
+	<% if current_user.admin? %>
+		<%= render @rsvps %>
+	<% else%>
+	<% end %>
+<% else %>
+<% end %>
