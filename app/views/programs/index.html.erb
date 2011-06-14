@@ -1,19 +1,23 @@
 <h1>Program List</h1>
 
 <% @programs.each do |program| %>
-	<div>
+<div>
 	<%= program.id %>
 	<%= program.title %>
 	<%= program.price %>
+	<%= program.period %>주
+	<%= program.term %>기 
 	<% if signed_in? %>
-		<%= link_to "신청하기", program_path(program) %>
+	<%= link_to "신청하기", program_path(program) %>
 	<% else%>
 	<% end %>
-	</div>
+</div>
 <% end %>
 
 <% if not signed_in? %>
-
-<div>프로그램을 신청하시려면 로그인하세요!</div>
-
+	<div>프로그램을 신청하시려면 로그인하세요!</div>
+<% else %>
+	<% if current_user.admin? %>
+		<div><%= link_to "새 프로그램 등록하기", 'programs/new' %></div>
+	<% end %>
 <% end %>
