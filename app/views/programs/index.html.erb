@@ -8,7 +8,12 @@
 	<% if signed_in? %>
 		<%= link_to "신청하기", program_path(program) %>
 	<% else%>
-		<%= link_to "신청하기", program_path(program) %>
 	<% end %>
 	</div>
+<% end %>
+
+<% if not signed_in? %>
+
+<div>프로그램을 신청하시려면 로그인하세요!</div>
+
 <% end %>
