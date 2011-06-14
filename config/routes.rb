@@ -8,6 +8,7 @@ Wisdomkit::Application.routes.draw do
   
   match '/signin', :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
+  match '/signup', :to => 'users#new'
   
   root :to => 'programs#index'
   
