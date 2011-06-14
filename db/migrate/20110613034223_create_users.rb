@@ -8,7 +8,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :phone_number
       t.datetime :birthday
       t.string :group
-      t.boolean :admin
+      t.boolean :admin, :default => false
 
       t.timestamps
     end

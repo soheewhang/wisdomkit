@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(:version => 20110613095548) do
     t.string   "phone_number"
     t.datetime "birthday"
     t.string   "group"
-    t.boolean  "admin"
+    t.boolean  "admin",              :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
