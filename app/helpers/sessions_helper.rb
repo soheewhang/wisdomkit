@@ -45,7 +45,7 @@ module SessionsHelper
   
   def deny_access
     store_location
-    redirect_to home_path
+    redirect_to root_path
   end
   
   def redirect_back_or(default)

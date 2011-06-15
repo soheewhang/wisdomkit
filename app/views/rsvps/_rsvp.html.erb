@@ -1,11 +1,17 @@
 <div>
-	<%= rsvp.user_id %>
-	<%= rsvp.program_id %>
-	<%= rsvp.status %>
-	<% if rsvp.status == "not payed" %> 
-		<%= link_to "결제하기", new_rsvp_path %>
-	<% else %>
-		결제가 완료되었습니다
+	<% if current_user.admin? %>
+		<%= rsvp.user.name %>
+		<%= rsvp.status %>
 	<% end %>
+	<%= rsvp.program.title %>
+	<% if rsvp.status == "applied" %> 
+		<%= link_to "결제하기", new_rsvp_path %>
+	<% elsif rsvp.status == "not payed" %>
+		입금 대기중입니다 
+	<% elsif rsvp.status == "payed" %>
+		결제가 완료되었습니다
+<!-- there should be three status; applied, not payed, payed -->
+	<% end %>
+	<%= link_to "상세정보보기", program_path(rsvp.program) %>
 </div>
  

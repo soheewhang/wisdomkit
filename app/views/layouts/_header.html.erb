@@ -1,6 +1,7 @@
 <div><%= link_to image_tag("/logo.png"), root_path %>
 	<% if signed_in? %>
-			<span><%= link_to "로그아웃", signout_path, :method => :delete %></span>
+			<span><%= link_to "로그아웃", signout_path, :method => :delete %></span> |
+			<span><%= link_to "내 정보", user_path(current_user) %></span>
 	<% else %>	
 			<span><%= link_to "로그인", '/signin' %></span> | 
 			<span><%= link_to "회원가입", 'signup' %>
