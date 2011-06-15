@@ -2,6 +2,9 @@
 	<% if signed_in? %>
 			<span><%= link_to "로그아웃", signout_path, :method => :delete %></span> |
 			<span><%= link_to "내 정보", user_path(current_user) %></span>
+			<% if current_user.admin? %>
+				<span> | <%= link_to "결제관리", rsvps_path %>
+			<% end %>
 	<% else %>	
 			<span><%= link_to "로그인", '/signin' %></span> | 
 			<span><%= link_to "회원가입", 'signup' %>

@@ -1,5 +1,8 @@
+#encoding:UTF-8
 class ProgramsController < ApplicationController
-  
+
+  before_filter :admin_user, :only => [:create]
+
   def index
     @programs = Program.all
   end

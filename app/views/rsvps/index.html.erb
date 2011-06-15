@@ -1,5 +1,6 @@
 <% if signed_in? %>
 	<% if current_user.admin? %>
+		<h1> Payments List </h1>
 		<%= render @rsvps %>
 	<% else%>
 	<% end %>
